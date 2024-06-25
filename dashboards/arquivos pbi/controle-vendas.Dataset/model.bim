@@ -1,0 +1,1790 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"META_2017\",\"META_2018\",\"META_2019\",\"META_2020\",\"META_CONSOLIDADA\",\"Medidas\",\"Consulta1\",\"CALENDÁRIO\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.121.644.0 (23.09)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "pt-BR",
+    "cultures": [
+      {
+        "name": "pt-BR",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Consulta1",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Function"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Fonte = List.Dates",
+          "in",
+          "    Fonte"
+        ],
+        "kind": "m",
+        "lineageTag": "4190f54d-9f8c-4aa4-a7b1-b54273d60e60"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "8c74da76-8357-4c31-945b-2f28f40a1c92",
+        "fromColumn": "DATA",
+        "fromTable": "CALENDÁRIO",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_693c6cac-3592-455d-9207-41f729db9fda"
+      },
+      {
+        "name": "a7398ec5-eea2-433e-aae5-25d6bf6b6b22",
+        "fromColumn": "DATA",
+        "fromTable": "META_2017",
+        "toColumn": "DATA",
+        "toTable": "CALENDÁRIO"
+      },
+      {
+        "name": "1e87d64c-7863-442b-abf7-ee3ea8eaac43",
+        "fromColumn": "DATA",
+        "fromTable": "META_2019",
+        "toColumn": "DATA",
+        "toTable": "CALENDÁRIO"
+      },
+      {
+        "name": "5542e520-a628-4836-b39a-e00ae7367498",
+        "fromColumn": "DATA",
+        "fromTable": "META_2018",
+        "toColumn": "DATA",
+        "toTable": "CALENDÁRIO"
+      },
+      {
+        "name": "fe0102f6-78aa-44fa-962a-4326a008319e",
+        "fromColumn": "DATA",
+        "fromTable": "META_CONSOLIDADA",
+        "toColumn": "DATA",
+        "toTable": "CALENDÁRIO"
+      },
+      {
+        "name": "bcf932d7-c581-4615-9954-1b908915025c",
+        "fromColumn": "DATA",
+        "fromTable": "META_2020",
+        "toColumn": "DATA",
+        "toTable": "CALENDÁRIO"
+      }
+    ],
+    "sourceQueryCulture": "pt-BR",
+    "tables": [
+      {
+        "name": "META_2017",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DATA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "isHidden": true,
+            "lineageTag": "e4ca4845-48ba-42a6-9eb4-7abc214e4f10",
+            "sourceColumn": "DATA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TOTAL_VENDA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "7e8d660d-0cc8-45ec-a42f-e2ccd0b5ce14",
+            "sourceColumn": "TOTAL_VENDA",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VALOR_CANCELADO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "double",
+            "isHidden": true,
+            "lineageTag": "f13f82f4-42d1-49a1-9381-f7852e141dc0",
+            "sourceColumn": "VALOR_CANCELADO",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NUMERO_CUPOM_FISCAL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "f14f7920-f34c-4e08-8687-41be6ae743c7",
+            "sourceColumn": "NUMERO_CUPOM_FISCAL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NOME VENDEDOR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "9f2aa9af-dbf7-4faf-bf3a-c68553d18e09",
+            "sourceColumn": "NOME VENDEDOR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FORMA PAGAMENTO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "a15ee964-14d5-4a78-ab51-37f12bfc0bf0",
+            "sourceColumn": "FORMA PAGAMENTO",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "1837d95d-f4c4-465f-b9a0-ed6735fe3259",
+        "partitions": [
+          {
+            "name": "META_2017",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Excel.Workbook(File.Contents(\"C:\\Users\\erickss\\Downloads\\3_MODULO++-+POWER_BI+-+Expert+Sênior_VENDAS\\3_MODULO  - POWER_BI - Expert Sênior\\3_CONTROLE DE VENDAS\\4_1_meta_2017.xlsx\"), null, true),",
+                "    META_2017_Sheet = Fonte{[Item=\"META_2017\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(META_2017_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"DATA\", type datetime}, {\"TOTAL_VENDA\", Int64.Type}, {\"CAIXA_VENDEDOR\", type text}, {\"COD_FORMA_PGTO\", type text}, {\"VALOR_CANCELADO\", type number}, {\"NUMERO_CUPOM_FISCAL\", Int64.Type}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Tipo Alterado\",{{\"NUMERO_CUPOM_FISCAL\", type text}}),",
+                "    #\"DEPARA VENDEDOR\" = Table.AddColumn(#\"Tipo Alterado1\", \"NOME VENDEDOR\", each if Text.Contains([CAIXA_VENDEDOR], \"UGB\") then \"UMBERTO\" else if Text.Contains([CAIXA_VENDEDOR], \"8080\") then \"NATALIA\" else if Text.Contains([CAIXA_VENDEDOR], \"WAO\") then \"WAGNER\" else if Text.Contains([CAIXA_VENDEDOR], \"WAP\") then \"LUCIA\" else \"VENDEDOR NÃO CADASTRADO\"),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"DEPARA VENDEDOR\",{{\"NOME VENDEDOR\", type text}}),",
+                "    #\"DEPARA PAGAMENTO\" = Table.AddColumn(#\"Tipo Alterado2\", \"FORMA PAGAMENTO\", each if Text.Contains([COD_FORMA_PGTO], \"1\") then \"DINHEIRO\" else if Text.Contains([COD_FORMA_PGTO], \"3\") then \"CARTÃO DÉBITO\" else if Text.Contains([COD_FORMA_PGTO], \"4\") then \"CARTÃO CRÉDITO\" else if Text.Contains([COD_FORMA_PGTO], \"##\") then \"CARTÃO PRESENTE\" else if Text.Contains([COD_FORMA_PGTO], \"$$\") then \"NÃO INFORMADO\" else if Text.Contains([COD_FORMA_PGTO], \"px\") then \"PIX\" else \"PGTO NÃO CADASTRADO\"),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"DEPARA PAGAMENTO\",{\"DATA\", \"TOTAL_VENDA\", \"VALOR_CANCELADO\", \"NUMERO_CUPOM_FISCAL\", \"NOME VENDEDOR\", \"FORMA PAGAMENTO\"}),",
+                "    #\"Tipo Alterado3\" = Table.TransformColumnTypes(#\"Outras Colunas Removidas\",{{\"DATA\", type date}, {\"FORMA PAGAMENTO\", type text}})",
+                "in",
+                "    #\"Tipo Alterado3\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_aeac1e18-4e0f-4cc6-b7b2-4d8ab6b75992",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "fe307d1c-21d2-4a76-8b17-05fa05b7f5c1",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "1aefa313-3deb-45d3-ba49-72b842caa8b4",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "32c6c69e-4233-4470-9a77-b4c6ae8e3847",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "18348d7b-78a0-4bde-9d5d-8086b4a0f26e",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "884c060c-8ad5-42b8-be2f-000e37e6b475",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Trim \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "b6ad1781-9d0e-490c-bc57-e4f3473dc7be",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Dia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "81ab549f-5e4c-4a6e-a19c-0181ca92c351",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hierarquia de datas",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Ano",
+                "column": "Ano",
+                "lineageTag": "212e8716-03e0-43ae-90ee-b312474ce029",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "4f8a8d52-2f67-43c9-b9b0-ec2fe020eac1",
+                "ordinal": 1
+              },
+              {
+                "name": "Mês",
+                "column": "Mês",
+                "lineageTag": "65851191-6282-4fbe-8ece-25d9f58fbe26",
+                "ordinal": 2
+              },
+              {
+                "name": "Dia",
+                "column": "Dia",
+                "lineageTag": "5f55995c-151e-4b98-af8f-aed4058f53b6",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "dd4c6407-dddc-4f64-b017-277800691b90"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "4e702f7a-ce23-4c3a-bf40-0bb342a10223",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_aeac1e18-4e0f-4cc6-b7b2-4d8ab6b75992",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "META_2018",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DATA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "isHidden": true,
+            "lineageTag": "46274df9-7f9c-4b17-a4e8-0ce734a55973",
+            "sourceColumn": "DATA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TOTAL_VENDA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "f5b36723-8146-42b0-847d-b0f77d1b4b91",
+            "sourceColumn": "TOTAL_VENDA",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VALOR_CANCELADO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "double",
+            "isHidden": true,
+            "lineageTag": "db0a42d3-b7c3-4bb6-8309-d837e7a197ca",
+            "sourceColumn": "VALOR_CANCELADO",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NUMERO_CUPOM_FISCAL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "cd8103f2-1351-4699-8494-f9161d07be29",
+            "sourceColumn": "NUMERO_CUPOM_FISCAL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NOME VENDEDOR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "3e5148c9-5c10-4747-b935-e84d49963053",
+            "sourceColumn": "NOME VENDEDOR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FORMA PAGAMENTO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "c87e6708-2bd1-408f-b634-03871e4b4274",
+            "sourceColumn": "FORMA PAGAMENTO",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "549b25b6-5539-44e3-90f5-23c4714fcad3",
+        "partitions": [
+          {
+            "name": "META_2018",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Excel.Workbook(File.Contents(\"C:\\Users\\erickss\\Downloads\\3_MODULO++-+POWER_BI+-+Expert+Sênior_VENDAS\\3_MODULO  - POWER_BI - Expert Sênior\\3_CONTROLE DE VENDAS\\4_1_meta_2018.xlsx\"), null, true),",
+                "    META_2018_Sheet = Fonte{[Item=\"META_2018\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(META_2018_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"DATA\", type datetime}, {\"TOTAL_VENDA\", Int64.Type}, {\"CAIXA_VENDEDOR\", type text}, {\"COD_FORMA_PGTO\", type text}, {\"VALOR_CANCELADO\", type number}, {\"NUMERO_CUPOM_FISCAL\", Int64.Type}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Tipo Alterado\",{{\"NUMERO_CUPOM_FISCAL\", type text}}),",
+                "    #\"DEPARA NOME VENDEDOR\" = Table.AddColumn(#\"Tipo Alterado1\", \"NOME VENDEDOR\", each if Text.Contains([CAIXA_VENDEDOR], \"JLP\") then \"JULIO\" else if Text.Contains([CAIXA_VENDEDOR], \"VNS\") then \"WANESSA\" else if Text.Contains([CAIXA_VENDEDOR], \"VRL\") then \"LARISSA\" else if Text.Contains([CAIXA_VENDEDOR], \"TH\") then \"THIAGO\" else \"VENDEDOR NÃO CADASTRADO\"),",
+                "    #\"DEPARA FORMA PAGAMENTO\" = Table.AddColumn(#\"DEPARA NOME VENDEDOR\", \"FORMA PAGAMENTO\", each if Text.Contains([COD_FORMA_PGTO], \"1\") then \"DINHEIRO\" else if Text.Contains([COD_FORMA_PGTO], \"3\") then \"CARTÃO DÉBITO\" else if Text.Contains([COD_FORMA_PGTO], \"4\") then \"CARTÃO CRÉDITO\" else if Text.Contains([COD_FORMA_PGTO], \"##\") then \"CARTÃO PRESENTE \" else if Text.Contains([COD_FORMA_PGTO], \"$$\") then \"NÃO INFORMADO\" else if Text.Contains([COD_FORMA_PGTO], \"px\") then \"PIX\" else \"PGTO NÃO CADASTRADO\"),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"DEPARA FORMA PAGAMENTO\",{\"DATA\", \"TOTAL_VENDA\", \"VALOR_CANCELADO\", \"NUMERO_CUPOM_FISCAL\", \"NOME VENDEDOR\", \"FORMA PAGAMENTO\"}),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Outras Colunas Removidas\",{{\"FORMA PAGAMENTO\", type text}, {\"NOME VENDEDOR\", type text}, {\"DATA\", type date}})",
+                "in",
+                "    #\"Tipo Alterado2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "META_2019",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DATA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "isHidden": true,
+            "lineageTag": "11c4a941-3813-4fef-937e-29cf5517ca12",
+            "sourceColumn": "DATA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TOTAL_VENDA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "78ad3d66-1db9-4ed6-838b-3adbf74372ef",
+            "sourceColumn": "TOTAL_VENDA",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VALOR_CANCELADO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "9685d0da-181f-40fd-80e1-7301e55953a6",
+            "sourceColumn": "VALOR_CANCELADO",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NUMERO_CUPOM_FISCAL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "3f6fc63e-6a78-4c07-a98a-2cb6117f9daa",
+            "sourceColumn": "NUMERO_CUPOM_FISCAL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NOME VENDEDOR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "9441b08d-26cc-410f-8672-bb580568a6c0",
+            "sourceColumn": "NOME VENDEDOR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FORMA PAGAMENTO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "5a513924-52de-4c90-ba00-827a941eadf2",
+            "sourceColumn": "FORMA PAGAMENTO",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "8d6d949b-5b44-4aee-af86-3b359aa5a6eb",
+        "partitions": [
+          {
+            "name": "META_2019",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Excel.Workbook(File.Contents(\"C:\\Users\\erickss\\Downloads\\3_MODULO++-+POWER_BI+-+Expert+Sênior_VENDAS\\3_MODULO  - POWER_BI - Expert Sênior\\3_CONTROLE DE VENDAS\\4_1_meta_2019.xlsx\"), null, true),",
+                "    META_2019_Sheet = Fonte{[Item=\"META_2019\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(META_2019_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"DATA\", type datetime}, {\"TOTAL_VENDA\", Int64.Type}, {\"CAIXA_VENDEDOR\", type text}, {\"COD_FORMA_PGTO\", type text}, {\"VALOR_CANCELADO\", Int64.Type}, {\"NUMERO_CUPOM_FISCAL\", Int64.Type}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Tipo Alterado\",{{\"NUMERO_CUPOM_FISCAL\", type text}}),",
+                "    #\"Colunas Reordenadas\" = Table.ReorderColumns(#\"Tipo Alterado1\",{\"DATA\", \"TOTAL_VENDA\", \"VALOR_CANCELADO\", \"CAIXA_VENDEDOR\", \"COD_FORMA_PGTO\", \"NUMERO_CUPOM_FISCAL\"}),",
+                "    #\"DEPARA NOME VENDEDOR\" = Table.AddColumn(#\"Colunas Reordenadas\", \"NOME VENDEDOR\", each if Text.Contains([CAIXA_VENDEDOR], \"309\") then \"CLEITON\" else if Text.Contains([CAIXA_VENDEDOR], \"USX\") then \"MARIA\" else if Text.Contains([CAIXA_VENDEDOR], \"USV\") then \"CLAUDIO\" else if Text.Contains([CAIXA_VENDEDOR], \"VRL\") then \"PALOMA\" else if Text.Contains([CAIXA_VENDEDOR], \"VRO\") then \"ANTONIO\" else if Text.Contains([CAIXA_VENDEDOR], \"VRP\") then \"LARISSA\" else \"VENDEDOR NÃO CADASTRADO\"),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"DEPARA NOME VENDEDOR\",{{\"NOME VENDEDOR\", type text}}),",
+                "    #\"DEPARA FORMA PAGAMENTO\" = Table.AddColumn(#\"Tipo Alterado2\", \"FORMA PAGAMENTO\", each if Text.Contains([COD_FORMA_PGTO], \"1\") then \"DINHEIRO\" else if Text.Contains([COD_FORMA_PGTO], \"3\") then \"CARTÃO DÉBITO\" else if Text.Contains([COD_FORMA_PGTO], \"4\") then \"CARTÃO CRÉDITO\" else if Text.Contains([COD_FORMA_PGTO], \"##\") then \"CARTÃO PRESENTE\" else if Text.Contains([COD_FORMA_PGTO], \"$$\") then \"NÃO INFORMADO\" else if Text.Contains([COD_FORMA_PGTO], \"px\") then \"PIX\" else \"PGTO NÃO CADASTRADO\"),",
+                "    #\"Tipo Alterado3\" = Table.TransformColumnTypes(#\"DEPARA FORMA PAGAMENTO\",{{\"FORMA PAGAMENTO\", type text}}),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Tipo Alterado3\",{\"DATA\", \"TOTAL_VENDA\", \"VALOR_CANCELADO\", \"NUMERO_CUPOM_FISCAL\", \"NOME VENDEDOR\", \"FORMA PAGAMENTO\"}),",
+                "    #\"Tipo Alterado4\" = Table.TransformColumnTypes(#\"Outras Colunas Removidas\",{{\"DATA\", type date}})",
+                "in",
+                "    #\"Tipo Alterado4\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "META_CONSOLIDADA",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DATA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd/mm/yyyy",
+            "lineageTag": "083a1472-5825-4e53-8daa-e4c82d30d617",
+            "sourceColumn": "DATA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TOTAL_VENDA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a295b548-a0fd-4d11-b5cb-e545ce4154dd",
+            "sourceColumn": "TOTAL_VENDA",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VALOR_CANCELADO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "9eed45ae-30c8-4b3c-9285-ae7aa29b5eea",
+            "sourceColumn": "VALOR_CANCELADO",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NOME VENDEDOR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f8bd7825-8d35-4bd3-a6c7-542853135ae9",
+            "sourceColumn": "NOME VENDEDOR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FORMA PAGAMENTO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1c52ac1d-338f-4bef-aaf6-40551cd3704a",
+            "sourceColumn": "FORMA PAGAMENTO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RECEBIMENTO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "828d4667-dbb8-4f15-92db-7a5406e19098",
+            "sourceColumn": "RECEBIMENTO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "N FISCAL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2aff086d-4743-4f6b-83ee-87ecc0ffc49d",
+            "sourceColumn": "N FISCAL",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9fa2c7db-e1e3-4025-a639-ce5c9a6d3d2e",
+        "partitions": [
+          {
+            "name": "META_CONSOLIDADA",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Table.Combine({META_2017, META_2018, META_2019}),",
+                "    #\"Consulta Acrescentada\" = Table.Combine({Fonte, META_2020}),",
+                "    #\"Personalização Adicionada\" = Table.AddColumn(#\"Consulta Acrescentada\", \"Personalizar\", each Text.PadStart([NUMERO_CUPOM_FISCAL], 9, \"0\")),",
+                "    #\"Coluna Condicional Adicionada\" = Table.AddColumn(#\"Personalização Adicionada\", \"RECEBIMENTO\", each if Text.Contains([FORMA PAGAMENTO], \"DINHEIRO\") then \"IMEDIATO\" else if Text.Contains([FORMA PAGAMENTO], \"PIX\") then \"IMEDIATO\" else \"PARCELADO\"),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Coluna Condicional Adicionada\",{{\"Personalizar\", type text}}),",
+                "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado\",{{\"Personalizar\", \"N FISCAL\"}}),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Colunas Renomeadas\",{\"DATA\", \"TOTAL_VENDA\", \"VALOR_CANCELADO\", \"NOME VENDEDOR\", \"FORMA PAGAMENTO\", \"RECEBIMENTO\", \"N FISCAL\"}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Outras Colunas Removidas\",{{\"RECEBIMENTO\", type text}})",
+                "in",
+                "    #\"Tipo Alterado1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Medidas",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          }
+        ],
+        "lineageTag": "b13687ee-5d95-485c-a35b-9d64a1089a06",
+        "measures": [
+          {
+            "name": "Faturamento",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "SUM(META_CONSOLIDADA[TOTAL_VENDA])",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "12c0275d-dcd3-4f38-a67e-402288e56a71"
+          },
+          {
+            "name": "Valor Cancelado",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "SUM(META_CONSOLIDADA[VALOR_CANCELADO])",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "2d1781fe-fd5c-47b8-9ff0-272964874abf"
+          },
+          {
+            "name": "Func Toggle",
+            "expression": "SELECTEDVALUE(META_CONSOLIDADA[RECEBIMENTO])",
+            "lineageTag": "f980f6a3-99cc-41c0-be2a-8575c068b16a"
+          },
+          {
+            "name": "Fat 2017",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "SUM(META_2017[TOTAL_VENDA]) + 0",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "d5259724-2667-4627-a148-e8298ccdd15e"
+          },
+          {
+            "name": "FAT 2018",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "SUM(META_2018[TOTAL_VENDA]) + 0",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "f3249e8a-7a42-41af-8181-54d21b65fa7c"
+          },
+          {
+            "name": "2017 X 2018",
+            "expression": "IF([Fat 2017] >= [FAT 2018], \"GREEN\", \"YELLOW\")",
+            "lineageTag": "48fff423-0923-4886-ad9f-8bb4002255ef"
+          },
+          {
+            "name": "FAT 2019",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "SUM(META_2019[TOTAL_VENDA]) + 0",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "0976c5b0-9575-4cf0-8d38-191ae64ab9c2"
+          },
+          {
+            "name": "CRESC PERCENTUAL",
+            "expression": "DIVIDE([FAT 2019] - [FAT 2018], [FAT 2018])",
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "07a1a08c-06af-4659-89ef-3262f627702a"
+          },
+          {
+            "name": "MIN",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "0",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "edbbfd3e-2834-407b-a4f8-d2a49e0ad4d7"
+          },
+          {
+            "name": "MAX",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "1000000",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "99f7d23b-b2c4-4c4d-85a1-73e4c0445979"
+          },
+          {
+            "name": "META 2018",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "165000",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "de034d46-ce1f-49b8-9871-6dc6ef0f1214"
+          },
+          {
+            "name": "FAT Credito",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(SUM(META_CONSOLIDADA[TOTAL_VENDA]),",
+              "            FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"CARTÃO CRÉDITO\")) + 0"
+            ],
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "fc8e5917-c9bf-4142-aec7-bc82fa1f7f19"
+          },
+          {
+            "name": "FAT Debito",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(SUM(META_CONSOLIDADA[TOTAL_VENDA]),",
+              "        FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"CARTÃO DÉBITO\")) + 0"
+            ],
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "8d38142e-8424-4bca-807e-66555d836c53"
+          },
+          {
+            "name": "FAT Dinheiro",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "CALCULATE(SUM(META_CONSOLIDADA[TOTAL_VENDA]), FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"DINHEIRO\")) + 0",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "99edc8af-0831-4fa0-a1b5-e7b21b23260d"
+          },
+          {
+            "name": "FAT Cartão Presente",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "CALCULATE(SUM(META_CONSOLIDADA[TOTAL_VENDA]), FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"CARTÃO PRESENTE\")) + 0",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "b00c1309-d374-4936-a439-d3e9f31ef544"
+          },
+          {
+            "name": "FAT Pix",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "CALCULATE(SUM(META_CONSOLIDADA[TOTAL_VENDA]), FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"Pix\")) + 0",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "ff7a4031-6733-4bb2-ba00-77d3ecb0b29d"
+          },
+          {
+            "name": "FAT Não Informado",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "CALCULATE(SUM(META_CONSOLIDADA[TOTAL_VENDA]), FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"Não Informado\")) + 0",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "4f8f4c50-e967-4d40-abd7-15e99408960d"
+          },
+          {
+            "name": "QTDE Crédito",
+            "expression": "CALCULATE(COUNTA(META_CONSOLIDADA[N FISCAL]), FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"CARTÃO CRÉDITO\")) + 0",
+            "formatString": "0",
+            "lineageTag": "235547af-1ee1-48d4-939f-207e8e03eb19"
+          },
+          {
+            "name": "QTDE Débito",
+            "expression": "CALCULATE(COUNTA(META_CONSOLIDADA[N FISCAL]), FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"CARTÃO DÉBITO\")) + 0",
+            "formatString": "0",
+            "lineageTag": "35f4c157-842d-436f-aa1f-393fc7dd3ebf"
+          },
+          {
+            "name": "QTDE Dinheiro",
+            "expression": "CALCULATE(COUNTA(META_CONSOLIDADA[N FISCAL]), FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"DINHEIRO\")) + 0",
+            "formatString": "0",
+            "lineageTag": "83c973a3-b2aa-411e-a698-8119a0134a61"
+          },
+          {
+            "name": "QTDE Cartão Presente",
+            "expression": "CALCULATE(COUNTA(META_CONSOLIDADA[N FISCAL]), FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"CARTÃO PRESENTE\")) + 0",
+            "formatString": "0",
+            "lineageTag": "f43b91f4-8dba-42c9-9282-82f42643068b"
+          },
+          {
+            "name": "QTDE Pix",
+            "expression": "CALCULATE(COUNTA(META_CONSOLIDADA[N FISCAL]), FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"PIX\")) + 0",
+            "formatString": "0",
+            "lineageTag": "ad78a83c-bf22-41bc-8a23-f2ffa9e0a77e"
+          },
+          {
+            "name": "QTDE Não Informado",
+            "expression": "CALCULATE(COUNTA(META_CONSOLIDADA[N FISCAL]), FILTER(META_CONSOLIDADA, META_CONSOLIDADA[FORMA PAGAMENTO] = \"NÃO INFORMADO\")) + 0",
+            "formatString": "0",
+            "lineageTag": "2442c746-f09b-4517-b466-fac076885bb5"
+          },
+          {
+            "name": "FAT CREDITO 2017",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": [
+              "CALCULATE(SUM(META_2017[TOTAL_VENDA]), FILTER(META_2017, META_2017[FORMA PAGAMENTO] = \"CARTÃO CRÉDITO\"), ",
+              "                    DATESBETWEEN('CALENDÁRIO'[DATA],",
+              "                    (\"01/01/2017\"),(\"31/12/2017\") - 10)) + 0"
+            ],
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "f10d66c3-a6cc-48ea-bfac-3b315b7062af"
+          },
+          {
+            "name": "FAT Crédito 2018",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "CALCULATE(SUM(META_2018[TOTAL_VENDA]), FILTER(META_2018, META_2018[FORMA PAGAMENTO] = \"CARTÃO CRÉDITO\"), DATESBETWEEN('CALENDÁRIO'[DATA], (\"01/01/2018\"),(\"31/12/2018\") - 10)) + 0 ",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "74521f53-e968-45dd-a660-2897acf085e6"
+          },
+          {
+            "name": "FAT Crédito 2019",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "CALCULATE(SUM(META_2019[TOTAL_VENDA]), FILTER(META_2019, META_2019[FORMA PAGAMENTO] = \"CARTÃO CRÉDITO\"), DATESBETWEEN('CALENDÁRIO'[DATA],(\"01/01/2019\"),(\"31/12/2019\") - 10)) + 0",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "54088cda-ea4e-4cee-bec3-283de96f2e38"
+          },
+          {
+            "name": "Filtro Vendedor",
+            "expression": "SELECTEDVALUE(META_CONSOLIDADA[NOME VENDEDOR] , \"Selecione Um Vendedor\")",
+            "lineageTag": "6066b597-9508-4359-b196-059276c76828"
+          },
+          {
+            "name": "Filtro Venda",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "SELECTEDVALUE(META_CONSOLIDADA[TOTAL_VENDA], \"Selecione Uma Venda\")",
+            "lineageTag": "3d65b866-8852-42b3-be79-6a2a3dd4d1d4"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Medidas",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Coluna 1\" = _t]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(Fonte,{{\"Coluna 1\", type text}}),",
+                "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado\",{\"Coluna 1\"})",
+                "in",
+                "    #\"Colunas Removidas\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "CALENDÁRIO",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DATA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd/mm/yyyy",
+            "lineageTag": "77173f08-7bf4-4b1e-992a-ad03065d2fc6",
+            "sourceColumn": "DATA",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Hierarquia de datas",
+                  "table": "LocalDateTable_693c6cac-3592-455d-9207-41f729db9fda"
+                },
+                "isDefault": true,
+                "relationship": "8c74da76-8357-4c31-945b-2f28f40a1c92"
+              }
+            ]
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6d82830a-b92e-4028-b7ce-e9c57aa11665",
+            "sourceColumn": "Ano",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Nome do Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fa65e660-9f97-4edd-b57c-78b58a783fd7",
+            "sourceColumn": "Nome do Mês",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nome do Dia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6775ba97-e672-4664-96f7-dec367435bb2",
+            "sourceColumn": "Nome do Dia",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "02070bf3-f4aa-492b-9552-6da6446d9b5a",
+            "sourceColumn": "Trimestre",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "09b38d88-3c7d-4b59-9f77-f021de6776a5",
+        "partitions": [
+          {
+            "name": "CALENDÁRIO",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Consulta1(#date(2017, 1, 1), 1461, #duration(1, 0, 0, 0)),",
+                "    #\"Convertido para Tabela\" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Convertido para Tabela\",{{\"Column1\", type date}}),",
+                "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado\",{{\"Column1\", \"DATA\"}}),",
+                "    #\"Ano Inserido\" = Table.AddColumn(#\"Colunas Renomeadas\", \"Ano\", each Date.Year([DATA]), Int64.Type),",
+                "    #\"Nome do Mês Inserido\" = Table.AddColumn(#\"Ano Inserido\", \"Nome do Mês\", each Date.MonthName([DATA]), type text),",
+                "    #\"Nome do Dia Inserido\" = Table.AddColumn(#\"Nome do Mês Inserido\", \"Nome do Dia\", each Date.DayOfWeekName([DATA]), type text),",
+                "    #\"Trimestre Inserido\" = Table.AddColumn(#\"Nome do Dia Inserido\", \"Trimestre\", each Date.QuarterOfYear([DATA]), Int64.Type)",
+                "in",
+                "    #\"Trimestre Inserido\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_693c6cac-3592-455d-9207-41f729db9fda",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "ee545fde-bae9-48fa-982d-8ae0da43181f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "7cb82619-e8e1-4373-92cb-11cd56fafb38",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "7ad72dc6-df0c-4677-9733-5ce49aab6b3d",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "bc60ecba-855c-4638-944f-01eb36e5ecfb",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "d22e3e3b-8166-403e-a355-c6c43db5ecf1",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Trim \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "cc9020db-e7fb-4cc7-bf81-84bdf23e76da",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Dia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "292e1816-79e2-4744-a1a8-be7c0a13989c",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hierarquia de datas",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Ano",
+                "column": "Ano",
+                "lineageTag": "f6a7dd7d-a6bf-446d-bcb6-a80f244ef816",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "cd8e1dc4-8eaa-41ec-80cd-dfbed5934c2d",
+                "ordinal": 1
+              },
+              {
+                "name": "Mês",
+                "column": "Mês",
+                "lineageTag": "39dafade-fe68-46f2-9094-110dd95ef103",
+                "ordinal": 2
+              },
+              {
+                "name": "Dia",
+                "column": "Dia",
+                "lineageTag": "2303a9ab-8c67-4cea-853d-426a22831feb",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "db9c85c8-10ff-4ed7-b8e1-f474608dce16"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "f6b479b3-ba99-4851-82a2-fb18f04ae7b2",
+        "partitions": [
+          {
+            "name": "LocalDateTable_693c6cac-3592-455d-9207-41f729db9fda",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('CALENDÁRIO'[DATA])), 1, 1), Date(Year(MAX('CALENDÁRIO'[DATA])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "META_2020",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DATA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "isHidden": true,
+            "lineageTag": "f3bd1d78-88ec-438c-a6f5-6ff0555c3999",
+            "sourceColumn": "DATA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TOTAL_VENDA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "2c680748-5b40-4609-8f4f-c7ee5b97c14f",
+            "sourceColumn": "TOTAL_VENDA",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "VALOR_CANCELADO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "d3247405-ae3e-4b24-b0ea-345de36d57c9",
+            "sourceColumn": "VALOR_CANCELADO",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NOME VENDEDOR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "cb3cbb73-7098-42a0-921f-7bb072d05415",
+            "sourceColumn": "NOME VENDEDOR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NUMERO_CUPOM_FISCAL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "d402397b-2702-44d5-9827-2abff644809c",
+            "sourceColumn": "NUMERO_CUPOM_FISCAL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FORMA PAGAMENTO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "65f2c419-6e93-4060-b95e-2ee540af6305",
+            "sourceColumn": "FORMA PAGAMENTO",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "1caa5d5c-41a7-43b8-bc8a-ad1980f09b01",
+        "partitions": [
+          {
+            "name": "META_2020",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Excel.Workbook(File.Contents(\"C:\\Users\\erickss\\Downloads\\3_MODULO++-+POWER_BI+-+Expert+Sênior_VENDAS\\3_MODULO  - POWER_BI - Expert Sênior\\3_CONTROLE DE VENDAS\\meta_2020.xlsx\"), null, true),",
+                "    Planilha1_Sheet = Fonte{[Item=\"Planilha1\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Planilha1_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"DATA\", type date}, {\"TOTAL_VENDA\", Int64.Type}, {\"CAIXA_VENDEDOR\", type text}, {\"COD_FORMA_PGTO\", type text}, {\"VALOR_CANCELADO\", Int64.Type}, {\"NUMERO_CUPOM_FISCAL\", Int64.Type}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Tipo Alterado\",{{\"NUMERO_CUPOM_FISCAL\", type text}}),",
+                "    #\"Coluna Duplicada\" = Table.DuplicateColumn(#\"Tipo Alterado1\", \"NUMERO_CUPOM_FISCAL\", \"NUMERO_CUPOM_FISCAL - Copiar\"),",
+                "    #\"Personalização Adicionada\" = Table.AddColumn(#\"Coluna Duplicada\", \"Personalizar\", each Text.PadStart([NUMERO_CUPOM_FISCAL],9,\"0\")),",
+                "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Personalização Adicionada\",{\"Personalizar\", \"NUMERO_CUPOM_FISCAL - Copiar\"}),",
+                "    #\"Colunas Reordenadas\" = Table.ReorderColumns(#\"Colunas Removidas\",{\"DATA\", \"TOTAL_VENDA\", \"VALOR_CANCELADO\", \"CAIXA_VENDEDOR\", \"NUMERO_CUPOM_FISCAL\", \"COD_FORMA_PGTO\"}),",
+                "    #\"DEPARA NOME VENDEDOR 2020\" = Table.AddColumn(#\"Colunas Reordenadas\", \"NOME VENDEDOR\", each if Text.Contains([CAIXA_VENDEDOR], \"POP\") then \"PAULO\" else if Text.Contains([CAIXA_VENDEDOR], \"UFG\") then \"LEONARDO\" else if Text.Contains([CAIXA_VENDEDOR], \"TYT\") then \"YOLANDA\" else if Text.Contains([CAIXA_VENDEDOR], \"BIP\") then \"BRUNO\" else if Text.Contains([CAIXA_VENDEDOR], \"SMP\") then \"SAMIRA\" else if Text.Contains([CAIXA_VENDEDOR], \"PML\") then \"LUCAS\" else if Text.Contains([CAIXA_VENDEDOR], \"MTT\") then \"ATHEUS\" else if Text.Contains([CAIXA_VENDEDOR], \"LEL\") then \"LURDES\" else if Text.Contains([CAIXA_VENDEDOR], \"DRT\") then \"DARIO\" else if Text.Contains([CAIXA_VENDEDOR], \"TDY\") then \"TELMA\" else if Text.Contains([CAIXA_VENDEDOR], \"PEK\") then \"SAMANTA\" else null),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"DEPARA NOME VENDEDOR 2020\",{{\"NOME VENDEDOR\", type text}}),",
+                "    #\"Colunas Reordenadas1\" = Table.ReorderColumns(#\"Tipo Alterado2\",{\"DATA\", \"TOTAL_VENDA\", \"VALOR_CANCELADO\", \"NOME VENDEDOR\", \"CAIXA_VENDEDOR\", \"NUMERO_CUPOM_FISCAL\", \"COD_FORMA_PGTO\"}),",
+                "    #\"Colunas Removidas1\" = Table.RemoveColumns(#\"Colunas Reordenadas1\",{\"CAIXA_VENDEDOR\"}),",
+                "    #\"DEPARA FORMA PGTO\" = Table.AddColumn(#\"Colunas Removidas1\", \"FORMA PAGAMENTO\", each if Text.Contains([COD_FORMA_PGTO], \"1\") then \"DINHEIRO\" else if Text.Contains([COD_FORMA_PGTO], \"3\") then \"CARTÃO DÉBITO\" else if Text.Contains([COD_FORMA_PGTO], \"4\") then \"CARTÃO CRÉDITO\" else if Text.Contains([COD_FORMA_PGTO], \"##\") then \"CARTÃO PRESENTE\" else if Text.Contains([COD_FORMA_PGTO], \"$$\") then \"NÃO INFORMADO\" else if Text.Contains([COD_FORMA_PGTO], \"px\") then \"PIX\" else if Text.Contains([COD_FORMA_PGTO], \"PIX\") then \"PIX\" else \"PGTO NÃO CADASTRADO\"),",
+                "    #\"Colunas Removidas2\" = Table.RemoveColumns(#\"DEPARA FORMA PGTO\",{\"COD_FORMA_PGTO\"}),",
+                "    #\"Tipo Alterado3\" = Table.TransformColumnTypes(#\"Colunas Removidas2\",{{\"FORMA PAGAMENTO\", type text}}),",
+                "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado3\",{{\"NUMERO_CUPOM_FISCAL\", \"NUMERO_CUPOM_FISCAL\"}})",
+                "in",
+                "    #\"Colunas Renomeadas\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
